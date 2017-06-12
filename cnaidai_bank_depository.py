@@ -5,6 +5,7 @@ from selenium import webdriver
 import time,os,sys
 import unittest,random
 from selenium.webdriver.support.ui import Select
+import cnaidai_Login
 
 class Automatic_Bid(unittest.TestCase):
 
@@ -20,48 +21,17 @@ class Automatic_Bid(unittest.TestCase):
         global f
         f = open('./Logs/' + str(time.strftime('%Y%m%d')) + '.txt', 'a+')
 
-    
+    def startTest(self):
+        printMe('start to test')
+        cnaidai_Login.logInCnaidai()
 
-    def logInCnaidai(self):
-
-        def asdfgh(numb):
-            print >> f, '【%s】-->:%s' % (str(time.strftime('%Y_%m_%d %H:%M:%S')),numb)
-            print(numb)
-        
-        browser.get("http://a.cnaidai.com/webjr/login.htm")
-        print ("---->: Come_to_Cnaidai_loginPage")
-        asdfgh('1111111111111')
-        # stepNum += 1
-        time.sleep(1)
-
-        print("---->: Start to input userMessage")
-        asdfgh('2222222222222')
-        usernameLabel = browser.find_element_by_name("username")
-        usernameLabel.clear()
-        usernameLabel.send_keys("18267175336")
-        print("---->: input username")
-        asdfgh('3333333333333')
-        time.sleep(1)
-        passwordLabel = browser.find_element_by_name("password")
-        passwordLabel.clear()
-        passwordLabel.send_keys("a1111111")
-        print("---->: input password")
-        asdfgh('4444444444444')
-        time.sleep(1)
-        valicodeLabel = browser.find_element_by_name("valicode")
-        valicodeLabel.clear()
-        valicodeLabel.send_keys("1111")
-        print ("---->: input valicode")
-        asdfgh('5555555555555')
-        time.sleep(1)
-        browser.find_element_by_id("login_submit").click()
-        print ("---->: Log_into_Cnaidai")
-        asdfgh('6666666666666')
-        time.sleep(3)
+def printMe(words):
+            print >> f, '【%s】%s' % (str(time.strftime('%Y_%m_%d %H:%M:%S')),words)
+            print(words)
 
 if __name__ == '__main__':
     suite = unittest.TestSuite()
-    suite.addTest(Automatic_Bid('logInCnaidai'))
+    suite.addTest(Automatic_Bid('startTest'))
 
     runner = unittest.TextTestRunner()
     runner.run(suite)

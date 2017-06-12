@@ -1,0 +1,18 @@
+【2017_06_08 10:48:33】-->:Come_to_Cnaidai_loginPage
+【2017_06_08 10:48:34】-->:Start to input userMessage
+【2017_06_08 10:48:34】-->:input username
+【2017_06_08 10:48:35】-->:input password
+【2017_06_08 10:48:36】-->:input valicode
+【2017_06_08 10:48:37】-->:Log_into_Cnaidai
+【2017_06_08 10:52:10】Come_to_Cnaidai_loginPage
+【2017_06_08 10:52:11】Start to input userMessage
+【2017_06_08 10:52:12】input username
+【2017_06_08 10:52:13】input password
+【2017_06_08 10:52:14】input valicode
+【2017_06_08 10:52:15】Log_into_Cnaidai
+【2017_06_08 11:57:53】start to test
+【2017_06_08 12:00:24】start to test
+【2017_06_08 12:00:57】start to test
+【2017_06_08 12:03:05】start to test
+【2017_06_08 12:04:00】start to test
+【2017_06_08 12:04:06】Come_to_Cnaidai_loginPage
